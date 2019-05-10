@@ -1,13 +1,16 @@
 * {
   box-sizing: border-box;
 }
+:root {
+  --greyish: rgb(52, 52, 52);
+}
 body {
   width: 100vw;
   height: 100vh;
   border: 0px;
   margin: 0px;
   background: black;
-  overflow: hidden;
+  /* overflow: hidden; */
   color: white;
 }
 
@@ -47,24 +50,29 @@ body {
 
 .framePanel {
   display: flex;
-  border: 2px blue solid;
+  background: var(--greyish);
+  margin: 5px;
   height: 7rem;
 }
 
 .framePanel > img {
   height: 100%;
-  max-width: 100px;
 }
 
 .frame {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  border: 2px blue solid;
+  background: var(--greyish);
+  border-left: 5px orange solid;
+  margin: 5px;
   height: 7rem;
+}
+.frame:active {
+  filter: brightness(50%);
 }
 
 #store {
-  border: blue 5px solid;
 }
 
 .frame > img {
@@ -82,6 +90,9 @@ body {
 }
 
 .circled {
+  position: absolute;
+  top: 25%;
+  right: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
