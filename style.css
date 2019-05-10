@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  border: 0px;
+  margin: 0px;
+  background: black;
+  overflow: hidden;
+  color: white;
+}
+
+.center {
+  display: flex;
+  text-align: center;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+#mainContainer {
+  position: relative;
+  display: grid;
+  grid-template-columns: 20fr 60fr 20fr;
+  height: 100%;
+}
+
+#mainContainer > div {
+  width: 100%;
+  height: 100%;
+}
+
+#leftContainer {
+  position: relative;
+  display: grid;
+  grid-template-rows: 20fr 80fr;
+}
+#leftContainer img {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  width: 80%;
+  transform: translateX(-50%);
+}
+
+.framePanel {
+  display: flex;
+  border: 2px blue solid;
+  height: 7rem;
+}
+
+.framePanel > img {
+  height: 100%;
+  max-width: 100px;
+}
+
+.frame {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 2px blue solid;
+  height: 7rem;
+}
+
+#store {
+  border: blue 5px solid;
+}
+
+.frame > img {
+  height: 100%;
+}
+
+.price {
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+}
+
+.littleCoin {
+  height: 1rem;
+}
+
+.circled {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: solid orange 5px;
+  height: 50px;
+  width: 50px;
+}
+
+#achievement {
+  color: white;
+  padding: 1rem;
+  border: orange solid 3px;
+  position: fixed;
+  bottom: 0px;
+  left: 50%;
+  transition: transform 1s ease-in-out;
+}
+#achievement div {
+  background: orange;
+  position: absolute;
+  content: "X";
+  top: 0px;
+  right: 0px;
+  padding: 2px;
+  font-size: 0.7rem;
+}
+.achievementVisible {
+  transform: translateY(0px) translateX(-50%);
+}
+.achievementInvisible {
+  transform: translateY(100px) translateX(-50%);
+}
